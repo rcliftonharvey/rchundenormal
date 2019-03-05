@@ -90,7 +90,7 @@ namespace RCH
     }; // end class RCH::Undenormal
     
     
-    // ---- MODULE CODE ENDS ABOVE ---- //
+// ---- MODULE CODE ENDS ABOVE ---- //
 } // end namespace RCH
 
 
