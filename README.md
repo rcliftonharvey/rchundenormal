@@ -65,7 +65,7 @@ if (shouldDisableDenormals == true)
   RCH::Undenormal noDenormals;
   // Denormal numbers can not be created here
 }
-// The class instance was destroyes again,
+// The class instance was destroyed again,
 // so denormal numbers may be created again.
 ```
 
