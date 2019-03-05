@@ -21,7 +21,7 @@ There is lots of good information in the [Wikipedia article about Denormal numbe
 
 This class was written with no dependencies, which means you can use it by itself and in any application, without being bound to any 3rd party frameworks.
 
-I have done my best to comment the sources as much as I could (or made sense to me), so by reading through the header you should get a good enough idea of what things can do or what you need to do with them.
+I have done my best to comment the source as much as I could (or made sense to me), so by reading through the header you should get a good enough idea of what does what and how to use it.
 
 The original repository for RCH::Undenormal is right here:<br>
 [https://github.com/rcliftonharvey/rchundenormal]
@@ -41,7 +41,7 @@ To avoid possible collisions with other libraries you may be using in your proje
 
 You don't need to prepare anything, you can just instantiate the Undenormal class on the fly, anywhere in your running code, when and where you need it.
 
-The Undenormal class handles its own lifetime, so you don't have to (and you can't) start or stop it by hand. As soon as the class goes out of scope, i.e. the scope it was instantiated in ends, the Undenormal class is destroyed and resets denormal numbers to be enabled.
+The Undenormal class handles its own lifetime, so you don't have to (and you can't) start or stop it by hand. As soon as the class goes out of scope, i.e. the scope it was instantiated in ends, the Undenormal class is destroyed and resets denormal numbers to be enabled again.
 
 There's nothing else to do with this class, you can only instantiate it:
 ```c++
@@ -60,6 +60,13 @@ if (shouldDisableDenormals == true)
 }
 // The class instance was destroyed by here,
 // so denormal numbers can be created again.
+// Creating a dedicated code block below
+{
+  RCH::Undenormal noDenormals;
+  // Denormal numbers can not be created here
+}
+// The class instance was destroyes again,
+// so denormal numbers may be created again.
 ```
 
 <br>
