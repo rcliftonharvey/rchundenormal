@@ -30,7 +30,7 @@ The original repository for RCH::Undenormal is right here:<br>
 
 ## How to use
 
-Include the [header file](https://github.com/rcliftonharvey/rchundenormal/tree/master/include/rchundenormal.h) folder in your project.
+Include the [header file](https://github.com/rcliftonharvey/rchundenormal/tree/master/include/rchundenormal.h) in your project.
 
 Depending on your compiler and workspace settings, you will probably have to adjust the include path for this file. But once the include path is sorted out, this is the only line you should need:
 ```c++
